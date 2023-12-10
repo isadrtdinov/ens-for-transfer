@@ -27,7 +27,7 @@ The project requirements are listed in `requirements.txt` file. To create a pip/
 pip install -r requirements.txt
 
 # using Conda
-conda create --name <env_name> --file requirements.txt
+conda create --name ens_for_transfer --file requirements.txt
 ```
 
 GPU with at least 32 Gb memory is required, e.g., NVIDIA V100/A100.
