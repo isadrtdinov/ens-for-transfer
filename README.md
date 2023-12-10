@@ -32,6 +32,35 @@ conda create --name ens_for_transfer --file requirements.txt
 
 GPU with at least 32 Gb memory is required, e.g., NVIDIA V100/A100.
 
+### Configuration and training parameters
+
+To see the configuration files and parameters for different training setups, refer to the [`configs/`](https://github.com/isadrtdinov/ens-for-transfer/tree/master/configs) directory.
+
+### Pre-trained checkpoints
+
+- BYOL ResNet-50 ImageNet pre-trained checkpoints are available [here]()
+- Supervised ResNet-50 ImageNet checkpoints pre-trained by [Asukha et al, 2020](https://github.com/SamsungLabs/pytorch-ensembles)
+- Supervised Swin-Tiny ImageNet pre-trained checkpoints are available [here]()
+
+### Experiments
+
+Scripts for launching experiments are located in the [`scripts/`](https://github.com/isadrtdinov/ens-for-transfer/tree/master/scripts) directory. For example, to launch experiments for BYOL ResNet-50 setup, run the following commands:
+
+- For training baselines (Local DE and Global DE)
+```sh
+python scripts/byol/byol_baseline.py
+```
+
+- For training SSE with different cycle hyperparameters
+```sh
+python scripts/byol/byol_sse.py
+```
+  
+- For training StarSSE with different cycle hyperparameters
+```sh
+python scripts/byol/byol_starsse.py
+```
+
 ## Citation
 
 If you found this code useful, please cite our paper
