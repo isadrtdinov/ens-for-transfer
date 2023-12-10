@@ -72,7 +72,6 @@ class SwinBaseConfig:
     data_path: str = './datasets/'
     model: str = 'SwinTiny'
     transform_name: str = 'swin_imagenet'
-    img_size: int = 224
     interpolation: str = 'bicubic'
     use_test: bool = True
     use_mixup: bool = True

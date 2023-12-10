@@ -18,7 +18,6 @@ class ResNetBaseConfig:
     data_path: str = './datasets/'
     model: str = 'ImageNetResNet50'
     transform_name: str = 'imageNet'
-    img_size: int = 224
     interpolation: str = 'bilinear'
     use_test: bool = True
     use_mixup: bool = False
