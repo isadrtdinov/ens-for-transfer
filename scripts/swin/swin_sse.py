@@ -3,7 +3,7 @@ import numpy as np
 
 sys.path.append('.')
 from main import main
-from configs.sv.swin.swin_sse import Params
+from configs.swin.swin_sse import Params
 
 
 NUM_RUNS = 2

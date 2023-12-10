@@ -3,7 +3,7 @@ import numpy as np
 
 sys.path.append('.')
 from main import main
-from configs.sv.resnet.resnet_single import Params
+from configs.resnet.resnet_single import Params
 
 
 NUM_RUNS = 5

@@ -3,7 +3,7 @@ import numpy as np
 
 sys.path.append('.')
 from main import main
-from configs.ssl.byol.byol_starsse import Params
+from configs.byol.byol_starsse import Params
 
 
 NUM_RUNS = 2
