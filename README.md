@@ -30,7 +30,9 @@ pip install -r requirements.txt
 conda create --name ens_for_transfer --file requirements.txt
 ```
 
-GPU with at least 32 Gb memory is required, e.g., NVIDIA V100/A100.
+Note:
+- As during fine-tuning the images are resized to `224x224` and given `batch_size=256`, training requires a GPU with at least **32 Gb memory**, e.g., **NVIDIA V100/A100**.
+- Logging is done with the [`wandb`](https://wandb.ai/) library, so make sure to log in before launching the experiments.
 
 ### Configuration and training parameters
 
@@ -38,9 +40,9 @@ To see the configuration files and parameters for different training setups, ref
 
 ### Pre-trained checkpoints
 
-- BYOL ResNet-50 ImageNet pre-trained checkpoints are available [here]()
+- BYOL ResNet-50 ImageNet pre-trained checkpoints are available [here](https://drive.google.com/drive/folders/1BONZZ6pytC3yP2EXcZJaB07z4eKmtx20?usp=sharing)
 - Supervised ResNet-50 ImageNet checkpoints pre-trained by [Asukha et al, 2020](https://github.com/SamsungLabs/pytorch-ensembles)
-- Supervised Swin-Tiny ImageNet pre-trained checkpoints are available [here]()
+- Supervised Swin-Tiny ImageNet pre-trained checkpoints are available [here](https://drive.google.com/drive/folders/1gF_T3r7cyDO-JqnIGnWUVQy2GvSHR_IC?usp=sharing)
 
 ### Experiments
 
@@ -63,7 +65,7 @@ python scripts/byol/byol_starsse.py
 
 ## Citation
 
-If you found this code useful, please cite our paper
+If you found this code useful, please cite our paper:
 
 ```
 @inproceedings{sadrtdinov2023to,
