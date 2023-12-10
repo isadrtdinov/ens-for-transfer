@@ -1,9 +1,7 @@
 __pycache__/
-Experiments/
 experiments/
 wandb/
-csv_results/
-sbatch_logs/
+.DS_Store
 checkpoints/
 .idea/
 .ipynb_checkpoints/
@@ -13,7 +11,6 @@ old_scripts/
 saved_logits/
 plots/
 logits/
-images/
 .vscode/
 artifacts/
 Experiments/
