@@ -47,3 +47,17 @@
 - `clip_grad (float)`: gradient clipping constant
 
 ### SSE/StarSSE
+
+- `num_fge (int)`: number of SSE cycles
+- `fge_epochs (int)`: number of epochs for each SSE cycle
+- `fge_warmup_epochs (int)`: number of warmup epochs for each SSE cycle
+- `fge_lr (float)`: maximum learning rate for each SSE cycle
+- `star_fge (bool)`: whether to train StarSSE instead of SSE
+- `reset_optim_state (bool)`: whether to reset the optimizer step before each cycle
+
+### Logging
+- `valid_freq (int)`: how frequently to validate (in training epochs)
+- `wandb_log_rate (int)`: how frequently to log to wandb (in training iterations)
+- `wandb_project (str)`: wandb project name
+- `wandb_group (str)`: wandb experiment group
+- `exp_name (str)`: experiment name (generated automatically)
