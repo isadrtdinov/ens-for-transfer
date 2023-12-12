@@ -66,6 +66,7 @@ class SwinBaseConfig:
     work_dir: str = './experiments/'
     save_path: str = None
     ckpt: str = './checkpoints/swin_1.pth'
+    save_logits: bool = True
 
     # Model, dataset and augmentation params
     dataset: str = 'cifar100'
@@ -75,8 +76,8 @@ class SwinBaseConfig:
     interpolation: str = 'bicubic'
     use_test: bool = True
     use_mixup: bool = True
-    save_logits: bool = True
     drop_last: bool = True
+    num_workers: int = 8
 
     # Training params
     epochs: int = 1
@@ -98,7 +99,6 @@ class SwinBaseConfig:
     loss_scaler: str = 'amp_scaler'
     amp_enable: bool = True
     clip_grad: float = 5.0
-    num_workers: int = 8
 
     # FGE/SSE params
     num_fge: int = 1
@@ -109,13 +109,11 @@ class SwinBaseConfig:
     reset_optim_state: bool = True
 
     # Logging params
-    use_wandb: bool = True
     valid_freq: int = 4
     wandb_log_rate: int = 30
     wandb_project: str = 'EnsForTransfer'
     wandb_group: str = 'Swin_Test'
     exp_name: str = ''
-    verbose: bool = True
 
     def __post_init__(self):
         if self.seed is None:

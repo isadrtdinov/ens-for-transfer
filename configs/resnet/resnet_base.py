@@ -12,6 +12,7 @@ class ResNetBaseConfig:
     work_dir: str = './experiments/'
     save_path: str = None
     ckpt: str = './checkpoints/ckpt_1.pth.tar'
+    save_logits: bool = True
 
     # Model, dataset and augmentation params
     dataset: str = 'cifar100'
@@ -21,7 +22,7 @@ class ResNetBaseConfig:
     interpolation: str = 'bilinear'
     use_test: bool = True
     use_mixup: bool = False
-    save_logits: bool = True
+    num_workers: int = 8
 
     # Training params
     epochs: int = 1
@@ -40,7 +41,6 @@ class ResNetBaseConfig:
     loss_scaler: str = None
     amp_enable: bool = False
     clip_grad: bool = False
-    num_workers: int = 8
 
     # FGE/SSE params
     num_fge: int = 1
@@ -51,13 +51,11 @@ class ResNetBaseConfig:
     reset_optim_state: bool = True
 
     # Logging params
-    use_wandb: bool = True
     valid_freq: int = 4
     wandb_log_rate: int = 30
     wandb_project: str = 'EnsForTransfer'
     wandb_group: str = 'ResNet_Test'
     exp_name: str = ''
-    verbose: bool = True
 
     def __post_init__(self):
         if self.seed is None:
