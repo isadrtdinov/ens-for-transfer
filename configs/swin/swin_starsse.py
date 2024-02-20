@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from configs.sv.swin.swin_base import SwinBaseConfig
+from configs.swin.swin_base import SwinBaseConfig
 
 
 @dataclass

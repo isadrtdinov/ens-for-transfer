@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from configs.ssl.byol.byol_base import BYOLBaseConfig
+from configs.resnet.resnet_base import ResNetBaseConfig
 
 
 @dataclass

@@ -1,4 +1,4 @@
-from configs.sv.resnet.resnet_base import ResNetBaseConfig
+from configs.resnet.resnet_base import ResNetBaseConfig
 
 
 Params = ResNetBaseConfig

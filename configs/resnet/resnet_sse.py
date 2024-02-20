@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-from configs.ssl.byol.byol_base import BYOLBaseConfig
+from configs.resnet.resnet_base import ResNetBaseConfig
 
 
 @dataclass
-class Params(BYOLBaseConfig):
+class Params(ResNetBaseConfig):
     dataset: str = 'cifar100'
     scheduler: str = 'cosine+warmup_cosine'
     epochs: int = 25

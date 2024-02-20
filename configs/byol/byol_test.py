@@ -1,4 +1,4 @@
-from configs.ssl.byol.byol_base import BYOLBaseConfig
+from configs.byol.byol_base import BYOLBaseConfig
 
 
 Params = BYOLBaseConfig
